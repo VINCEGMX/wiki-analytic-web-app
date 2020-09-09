@@ -1,6 +1,5 @@
-# Project Title
+# Wiki analytic web app
 
-Wiki analytic web app
 
 ## Getting Started
 
