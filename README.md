@@ -23,7 +23,7 @@ https://docs.mongodb.com/manual/installation/
 ```
 ### Deployment
 #### Following commands are for Linux based system
-#### Make sure currently under the Group20 dir
+#### Make sure currently under the wiki-analytic-web-app dir
 1. Install modules
 ```
 npm install
