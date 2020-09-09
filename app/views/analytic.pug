@@ -1,0 +1,142 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Wiki Analytics
+  link(rel='stylesheet' href='./analytic.css')
+  script(src='https://kit.fontawesome.com/ae28b79c91.js' crossorigin='anonymous')
+  script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
+  link(rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css")
+  script(src="https://www.gstatic.com/charts/loader.js") //Google Chart
+  script(src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js")
+  script(src="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.js")
+  script(tpye='text/javascript' src='./analytic.js')
+.navbar
+  .overall
+    a(href='#overall_section')
+      i.fas.fa-map-marker-alt
+    .text Overall Analytics
+  .overall
+    a(href='#individual_section')
+      i.fas.fa-border-all
+    .text Individual Article Analytics
+  .overall
+    a(href='#author_section')
+      i.fas.fa-feather-alt
+    .text Author Analytics
+.main
+  section#welcome.intro
+    h1 Welcome to Wiki Analytics
+    input#LogoutBtn(type='button' name='LogoutBtn' value='Logout')
+  section#overall_section.intro1 Overall Analytics
+  section
+    #content1
+      h1.title1 Overall Analytics
+      #revision
+        .line
+        div
+          h3 Top articles with the highest number of revisions
+          #highestRevision
+        div
+          h3 Top articles with the lowest number of revisions
+          #lowestRevision
+      #groupusers
+        .line
+        div
+          h3 Top articles edited by the largest group of registered users
+          #largestGroupUser  
+        div
+          h3 Top articles edited by the smallest group of registered users
+          #samllestGroupUser  
+      #history
+        .line
+        .title
+        div
+          h3 Top articles with the longest history
+          #longestHistory  
+        div
+          h3 Top articles with the shorest history
+          #shortestHistory
+        .line
+        h3 Enter Numbers of titles to be displayed   
+        .enterlabel
+          input#Limit.entertxt(type='number' name='Limit' placeholder='Enter Number' onKeyDown="return false" min="1")
+          span
+        input#LimitBtn.confirmBtn(type='button' name='LimitBtn' value='Confirm')
+      #distribution
+        .line
+        .title
+          h2 Distribution Charts
+          div
+            h3 Revision number distribution by year and by user type
+            #Chart1
+            input#TransBtn.switchBtn(type='button' name='TransBtn' value='Switch Chart Format')
+          div
+            h3 Revision number distribution by user type
+            div#pieInfo
+            br
+            #Chart2
+  section#individual_section.intro1 Individual Article Analytics
+  section
+    #content2
+      h1.title1 Individual Article Analytics
+      #article
+        .line
+        .title
+          h2 Select One Article for Further Information
+        form.individualfrom
+          select#titleList
+          input#articleSelectBtn(type="button" name="articleSelectBtn" value="Submit" )
+          #updateMessage
+          #TitleTable
+          #UsersTable
+          h4.chartDis The top 3 news about the selected individual article (from Reddit)
+          ul#redditList
+          input#inChart1.chartDis(type='checkbox' name='chart1' value='1')
+          label(for='inChart1').chartDis #[strong Revision number distributed by year and by user type]
+          br
+          br
+          div#individualChart1
+          br
+          br
+          input#inChart2.chartDis(type='checkbox' name='chart2' value='1')
+          label(for='inChart2').chartDis #[strong Revision number distribution based on user type]
+          br
+          br
+          div#individualChart2
+          br
+          br
+          input#inChart3.chartDis(type='checkbox' name='chart3' value='1')
+          label(for='inChart3').chartDis #[strong Revision number distributed by year made by the selected user]
+          h4#userIns Please select one user 
+          select#userList
+          input#userSelectBtn(class="" type="button" value="Submit" )
+          #individualChart3
+          h4.chartDis Year filter (All information will be genarated based on the range of years)
+          .left
+            .enterlabel_half
+              input#fromYearInput.entertxt(type='number' name='fromYearInput' placeholder='From' min="2001" max="2020" onKeyDown="return false")
+              span
+          .right
+            .enterlabel_half
+              input#toYearInput.entertxt(type='number' name='toYearInput' placeholder='To' min="2001" max="2020" onKeyDown="return false")
+              span
+          input#yearInputBtn(type='button' name='yearInputBtn' value='Confirm')
+        .line
+  section#author_section.intro1 Author Analytics
+  section
+    #content3
+      h1.title1 Author Analytics
+      #author
+        .line
+        h3 Please enter the author name you would like to search
+        .enterlabel
+          input#authorName.entertxt(type='string' name='authorName' placeholder='Enter Author')
+          span
+        input#authorNameBtn.confirmBtn(type='button' name='authorNameBtn' value='Confirm')
+      h3 Please select one of the articles for more information to be displayed
+      select#articleSearch
+      input#articleSearchBtn(type='button' name='articleSearchBtn' value='Select')
+      h3#timeInfo
+      textarea#timeArea(readonly="true")
+  section#footer.intro Inspired by Darkcode. Created by Group20.

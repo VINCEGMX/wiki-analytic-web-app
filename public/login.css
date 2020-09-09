@@ -1,0 +1,313 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    font-family: montserrat;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(125deg,#3387be,#FFCDD2);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+button {
+    background-color: #888;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#buttonInmiddle{
+    margin-left: 50%;
+}
+
+#title1{
+    font-size: 150px;
+    background:#333;
+}
+
+#table{
+    padding-left:100px;
+    padding-right:100px;
+}
+container-fluid{
+    padding-right:15px;
+    padding-left:15px;
+    margin-right:auto;
+    margin-left:auto
+}
+
+
+.jumbotron {
+    background-color: #313131;
+    color: white;
+    text-align: center;
+
+}
+
+.jumbotron p{
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#piechart{
+    padding-left:100px;
+    padding-right:100px;
+}
+
+#img3{
+    width: 40%;
+    float:right
+}
+
+
+.login-from{
+    width: 360px;
+    background: #f1f1f1;
+    height: 600px;
+    padding: 80px 40px; 
+    border-radius: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.login-from h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.txt{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 30px 0;
+}
+
+.txt input{
+    font-size: 15px;
+    color: #333333;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 5px;
+    height: 40px;
+}
+
+.txt span::before{
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 40%;
+    left: 5px; 
+    /*transform: translate(-50%);*/
+    color: #adadad;
+    z-index: -1;
+    transition: .5s;
+}
+
+.txt span::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    top: 100%;
+    background: linear-gradient(125deg,#3387be,#FFCDD2);
+    transition: .5s;
+}
+
+.focus + span::before{
+    top: -10px;
+}
+
+.focus + span::after{
+    width: 100%;
+}
+
+.resetbtn{
+    color: cornflowerblue;
+    background: none;
+    border: none;
+    margin: 0 0 10px 0;
+}
+
+.logbtn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: linear-gradient(125deg,#3387be,#FFCDD2);
+    background-size: 200%;
+    color: #f1f1f1;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.logbtn:hover{
+background-position: right;
+}
+
+.btn_text{
+    margin-top: 60px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.signup{
+    display: none;
+}
+
+.signup-from{
+    width: 360px;
+    background: #f1f1f1;
+    height: 880px;
+    padding: 80px 40px; 
+    border-radius: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.signup-from h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.signbtn{
+    width: 30%;
+    height: 30px;
+    border: none;
+    background: linear-gradient(125deg,#3387be,#FFCDD2);
+    background-size: 200%;
+    color: #f1f1f1;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.signbtn:hover{
+    background-position: right;
+}
+
+.signupbtn{
+    width: 49%;
+    height: 50px;
+    border: none;
+    background: linear-gradient(125deg,#3387be,#FFCDD2);
+    background-size: 200%;
+    color: #f1f1f1;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 8px;
+}
+
+.signupbtn:hover{
+background-position: right;
+}
+
+.sbtn_text{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+.resetIn{
+    display: none;
+}
+
+.reset-from{
+    width: 360px;
+    background: #f1f1f1;
+    height: 680px;
+    padding: 80px 40px; 
+    border-radius: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.reset_txt{
+    color: #adadad;
+    transition: .5s;
+}
+
+.select_list{
+    width: 100%;
+    background:none; 
+    border-radius: 30px; 
+    border: 1px solid #9194a7; 
+    color: #adadad;
+    text-indent: 10px; 
+    line-height: 26px; 
+    font-size: 12px;
+}
+
+.rbtn{
+    width: 30%;
+    height: 30px;
+    border: none;
+    background: linear-gradient(125deg,#3387be,#FFCDD2);
+    background-size: 200%;
+    color: #f1f1f1;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.rbtn:hover{
+    background-position: right;
+}
+

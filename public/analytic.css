@@ -1,0 +1,495 @@
+body{
+    min-height: 100vh;
+    margin:0;
+    padding:0;
+    font-family: montserrat;
+    
+}
+
+.navbar{
+    position: fixed;
+    top: 40%;
+    z-index: 99999;
+    left: 0;
+}
+
+.overall{
+    cursor: pointer;
+    position: relative;
+}
+
+.overall i{
+    display: block;
+    width: 60px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    background: #f1f1f1;
+    color: #b9b9b9;
+    font-size: 20px;
+    transition: .6s;
+}
+
+.overall a{
+    text-decoration: none;
+}
+
+.overall:hover i{
+    color: #3498db;
+}
+
+.text{
+    position: absolute;
+    height: 60px;
+    width: 260px;
+    background: #b9b9b9;
+    top: 0;
+    z-index: -1;
+    left: -240px;
+    color: #1b1b1b;
+    line-height: 60px;
+    text-align: center;
+    transition: .6s;
+    opacity: 0.8;
+}
+
+.overall:hover .text{
+    left: 60px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.main{
+    width: 100vw;
+    height: auto;
+}
+
+section{
+    background: #f1f1f1;
+}
+
+.title1{
+    font-size: 5vh;
+}
+
+.intro1{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: auto;
+    overflow: hidden;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    user-select: none;
+    cursor: default;
+} 
+
+.intro{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vh;
+    color: #f1f1f1;
+    background: linear-gradient(125deg,#3387be,#FFCDD2);
+}
+
+#overall_section{
+    color: #21373d;
+    font-size: 15vh;
+    background-image: url(./img/img1.jpg); 
+}
+
+#individual_section{
+    color: #21373d;
+    font-size: 10vh;
+    background-image: url(./img/img2.jpg);
+}
+
+#author_section{
+    color: #21373d;
+    font-size: 15vh;
+    background-image: url(./img/img3.jpg);
+}
+
+
+
+.line{
+    margin-top: 30px;
+    width:100%;
+    height:1px; 
+    background:#C0C0C0 ;
+}
+
+
+#content1{
+    margin-left:15%;
+    width: 70%;
+    height: auto;
+    padding: 80px 20px;
+}
+
+#content2{
+    margin-left:15%;
+    width: 70%;
+    height: auto;
+    padding: 80px 20px;
+}
+
+#content3{
+    margin-left:15%;
+    width: 70%;
+    height: auto;
+    padding: 80px 20px;
+}
+
+.enterlabel{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 40px 0;
+    width: 30%;
+}
+
+.entertxt{
+    font-size: 2vh;
+    color: #333333;
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+
+}
+
+.enterlabel span::before{
+    position: absolute;
+    top: 40%;
+    left:5px;
+    color: #adadad;
+    font-size: 25px;
+}
+
+.enterlabel span::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    top: 100%;
+    background:linear-gradient(125deg,#3387be,#FFCDD2);
+    transition: .5s;
+}
+
+.left{
+    display: none;
+    position: relative;
+}
+
+.right{
+    display: none;
+    position: relative;
+    top: -82px;
+    left: 17%;
+}
+
+.enterlabel_half{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 40px 0;
+    width: 15%;
+}
+
+.enterlabel_half span::before{
+    position: absolute;
+    top: 40%;
+    left:5px;
+    color: #adadad;
+    font-size: 25px;
+}
+
+.enterlabel_half span::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    top: 100%;
+    background:linear-gradient(125deg,#3387be,#FFCDD2);
+    transition: .5s;
+}
+
+.focus + span::before{
+    top: -10px;
+}
+
+.focus + span::after{
+    width: 100%;
+}
+
+.confirmBtn{
+    display: block;
+    position: relative;
+    font-size: 20px;
+    left: 30%;
+    top: -75px;
+    width: 100px;
+    height: 40px;
+    margin: 0 15px;
+    color: #f1f1f1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: .5s;
+    background-color: #869d9d;
+}
+
+#pieInfo{
+    width: 65%;
+    border: 1px solid black;
+    padding: 10px
+}
+
+#LogoutBtn{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    margin: 0 15px;
+    color: #f1f1f1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: .5s;
+    background-color: #869d9d;
+}
+
+
+#yearInputBtn{
+    display: none;
+    position: relative;
+    left: 33%;
+    top: -155px;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    margin: 0 15px;
+    color: #f1f1f1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: .5s;
+    background-color: #869d9d;
+}
+#titleList{
+    width: auto;
+    background:none; 
+    border-radius: 30px; 
+    border: 1px solid #9194a7; 
+    color: #21373d;
+    /* text-indent: 5px;  */
+    line-height: 26px; 
+    font-size: 20px;
+}
+
+#userList{
+    display: none;
+    width: auto;
+    background:none; 
+    border-radius: 30px; 
+    border: 1px solid #9194a7; 
+    color: #21373d;
+    /* text-indent: 10px;  */
+    line-height: 26px; 
+    font-size: 20px;
+}
+
+
+#articleSearch{
+    width: auto;
+    background:none; 
+    border-radius: 30px; 
+    border: 1px solid #9194a7; 
+    color: #21373d;
+    /* text-indent: 5px;  */
+    line-height: 26px; 
+    font-size: 25px;
+}
+
+#articleSelectBtn{
+    position: relative;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    margin: 0 15px;
+    color: #f1f1f1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: .5s;
+    background-color: #869d9d;
+}
+
+#articleSearchBtn{
+    display: block;
+    position: relative;
+    left: 30%;
+    top: -38px;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    margin: 0 15px;
+    color: #f1f1f1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: .5s;
+    background-color: #869d9d;
+}
+
+textarea{
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 20px;
+    display: block;
+    max-width: 100%;
+    padding: 15px 15px 30px;
+    border-radius: 15px;
+    border: 1px solid;
+    transition:box-shadow 0.5s ease;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+
+#TitleTable{
+    margin-top: 30px;
+}
+#userSelectBtn{
+    display: none;
+    position: relative;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    margin: 30px 15px;
+    color: #f1f1f1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: .5s;
+    background-color: #869d9d;
+
+}
+
+.chartDis{
+    display: none;
+}
+#userIns{
+    display: none;
+}
+
+.switchBtn{
+    font-size: 2vh;
+    display: block;
+    position: relative;
+    left: 30%;
+    width: 300px;
+    height: 60px;
+    margin: 30px 15px;
+    color: #f1f1f1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: .5s;
+    background-color: #869d9d;
+}
+.table{
+    border-collapse: collapse;
+    margin: 0 20px;
+    text-align: center;
+}
+
+
+table td, table th
+{
+    border: 1px solid #C0C0C0;
+    color: #21373d;
+    height: 30px;
+    width: 300px;
+}
+table thead th
+{
+    background-color: #C0C0C0;
+    width: 100px;
+}
+
+input[type="checkbox"]{
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 2em;
+  height: 1.5em;
+  line-height: 1.5;
+  cursor: pointer;
+}
+label::before,
+label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+}
+label::before {
+  content: " ";
+  border: 2px solid #bdc3c7;
+  border-radius: 20%;
+}
+/* Checkbox */
+input[type="checkbox"] + label::after {
+  content: "\2714";
+  color: #2c3e50;
+  line-height: 1.5;
+  text-align: center;
+}
+/* :checked */
+input[type="checkbox"]:checked + label::before{
+  background: #fff;
+  border-color: #fff;
+}
+input[type="checkbox"] + label::after {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+input[type="checkbox"]:checked + label::after{
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+/* Transition */
+label::before,
+label::after {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}

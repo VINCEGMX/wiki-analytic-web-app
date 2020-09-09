@@ -1,0 +1,147 @@
+doctype html
+
+
+head
+    meta(charset='UTF-8')
+    title Wiki Analytics
+    link(rel='stylesheet', href='./login.css')
+    link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(type='text/javascript', src='./login.js')
+
+// Navbar (sit on top)
+.w3-top
+    .w3-bar.w3-white.w3-wide.w3-padding.w3-card
+        a.w3-bar-item.w3-button(href='#home')
+            b Wikipedia Analytic
+
+        // Float links to the right. Hide them on small screens
+        .w3-right.w3-hide-small
+            button#login(onclick="document.getElementById('id01').style.display='block'", style='width:auto;') Login
+
+img(src='./img/landingpage.png',width='100%')
+div.jumbotron
+    //h1 Wikipedia Analytic
+    p(style='font-size =20px;')  Wikipedia Analytics is a web application that analyzes revisions on wikipedia articles. Analysis are performed in overall, individual and article level.
+
+
+.w3-row.w3-container(style='margin:50px 0')
+    .w3-half.w3-container
+        h2 Examine real-time data with ease
+        .w3-topbar.w3-border-amber
+            img(src='./img/timestamps.png', style='width:100%')
+        p(style='font-size:20px;') This example shows the timestamps of full revision history made by user Onetow1 of article Japan
+    .w3-half.w3-container
+        h2 Revision number distribution by user type with pie chart.
+        .w3-topbar.w3-border-orange
+            img(src='./img/pie.jpg', style='width:100%')
+        p(style='font-size:20px;') You can see the percentage of revision number by different user type
+
+.w3-row.w3-container(style='margin:50px 0')
+    .w3.w3-container
+        h2 Visualize data by various charts
+        .w3-topbar.w3-border-amber
+            img(src='./img/linechart.jpg', style='width:50.5%')
+            img(src='./img/table.jpg', style='width:49.5%')
+        p(style='font-size:20px;') You can see the distribution charts, with revision number distribution by year and by user type
+        p(style='font-size:20px;') You can switch different types of chart, like bar char or line chart
+
+#id01.modal
+    span.close(onclick="document.getElementById('id01').style.display='none'", title='Close Modal') &times;
+    .login
+        form#loginForm.login-from(action='/login', method='POST')
+            h1 Login
+            .txt
+                input(type='text', name='email')
+                span(data-placeholder='Username')
+            .txt
+                input(type='password', name='password')
+                span(data-placeholder='Password')
+            div
+                input.resetbtn(type='button', value='Forget your password?')
+            input#loginBtn.logbtn(type='submit', value='Login')
+            #signinRes
+            .btn_text
+                | Don&apos;t have account?
+                input.signbtn(type='button', value='Sign up!')
+
+    .signup
+        form#signupForm.signup-from(action='/signup', method='POST')
+            h1 Please Sign Up
+            .txt
+                input(type='text', name='firstname')
+                span(data-placeholder='First Name')
+            .txt
+                input(type='text', name='lastname')
+                span(data-placeholder='Last Name')
+            .txt
+                input(type='email', name='email')
+                span(data-placeholder='Email (Username)')
+            .txt
+                input#password(type='password', name='password')
+                span(data-placeholder='Password')
+            .txt
+                input#confirm_password(type='password', name='confirm_password')
+                span(data-placeholder='Please confirm your password')
+            div
+                span.reset_txt Reset Password Question
+                select.select_list.resetQuestion(name='resetQuestion')
+                    option What is the first and last name of your first boyfriend or girlfriend?
+                    option Which phone number do you remember most from your childhood?
+                    option What was your favorite place to visit as a child?
+                    option Who is your favorite actor, musician, or artist?
+                    option What is the name of your favorite pet?
+                    option In what city were you born?
+            .txt
+                input(type='text', name='resetAnswer')
+                span(data-placeholder='Answer')
+            #registerRes
+            br
+            input.signupbtn(type='submit', value='Sign up')
+            input.signupbtn(type='reset', value='Clear')
+            .sbtn_text
+                | Already have account?
+                input.signbtn.backLogin(type='button', value='Login!')
+
+    .resetIn
+        form#resetForm.reset-from(action='/resetPassword', method='POST')
+            h1 Please Reset Your Password
+            .txt
+                input(type='text', name='email')
+                span(data-placeholder='Email')
+            div
+                span.reset_txt Reset Password Question
+                select.select_list.resetQuestion(name='resetQuestion')
+                    option What is the first and last name of your first boyfriend or girlfriend?
+                    option Which phone number do you remember most from your childhood?
+                    option What was your favorite place to visit as a child?
+                    option Who is your favorite actor, musician, or artist?
+                    option What is the name of your favorite pet?
+                    option In what city were you born?
+            .txt
+                input(type='text', name='resetAnswer')
+                span(data-placeholder='Answer')
+            .txt
+                input(type='password', name='password')
+                span(data-placeholder='New password')
+            #resetRes
+            input.signupbtn(type='submit', value='Confirm')
+            input.signupbtn(type='reset', value='Clear')
+            .sbtn_text
+                | Remember your password?
+                input.rbtn.backLogin(type='button', value='Login!')
+
+footer.w3-center.w3-black.w3-padding-16
+    p Powered by Group20
+
+
+script.
+    // Get the modal
+    var modal = document.getElementById('id01');
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
