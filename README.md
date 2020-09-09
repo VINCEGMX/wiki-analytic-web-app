@@ -1,6 +1,6 @@
 # Project Title
 
-COMP5347 Web Application Development Assignment 2
+Wiki analytic web app
 
 ## Getting Started
 
@@ -60,11 +60,4 @@ Open page with the following link
 ```
 http://localhost:3000/
 ```
-
-
-## Authors
-
-* **MINGXING GU**
-* **Zhuangzhuang Niu**
-* **Yukun Fan**
 
